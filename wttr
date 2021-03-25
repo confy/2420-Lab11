@@ -1,0 +1,9 @@
+#!/bin/bash
+date=$(date +"%F-%H:%M:%S")
+
+if [ ! -d "$HOME/wttr" ]
+then
+    mkdir "$HOME/wttr"
+fi
+
+curl wttr.in/?format=v2 > "$HOME/wttr/weather-$date"
