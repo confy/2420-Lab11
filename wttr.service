@@ -1,0 +1,11 @@
+[Unit]
+Description=Hourly Weather
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wttr
+WorkingDirectory=/home/vagrant/wttr
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

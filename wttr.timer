@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs wttr hourly
+
+[Timer]
+OnCalendar=minutely
+Persistent=true
+
+[Install]
+WantedBy=timers.target
