@@ -1,4 +1,6 @@
 #!/bin/bash
 date=$(date +"%F-%H:%M:%S")
-curl wttr.in/?format=v2 > "/home/vagrant/wttr/weather-$date"
+path="/home/vagrant/wttr/weather-$date"
+curl wttr.in/?format=v2 > "$path"
+chmod 664 "$path"
 exit 0
